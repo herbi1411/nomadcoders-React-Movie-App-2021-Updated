@@ -12,14 +12,20 @@
 <script type="text/babel">
     const root = document.getElementById("root");
 
-    const Title = (<h3 id="title" onMouseEnter = {() => console.log("mouse Enter")}> Hello I'm a title</h3>);
+    const Title = () => (<h3 id="title" onMouseEnter = {() => console.log("mouse Enter")}> Hello I'm a title</h3>);
 
-    const btn = (<button style ={{
+    const Button = () => (<button style ={{
         backgroundColor: "tomato",
     }} onClick = {() => console.log("i'm clicked")}>Click me</button>);
 
-    const container = React.createElement("div",null,[Title,btn]);
-    ReactDOM.render(container, root);
+    // const Container = React.createElement("div",null,[Title,btn]);
+    const Container = (
+        <div>
+            <h3> 왜 않돼 ㅠㅠ</h3>
+            <Title/>
+            <Button/>
+        </div>);
+    ReactDOM.render(Container, root);
 </script>
 </html>
 

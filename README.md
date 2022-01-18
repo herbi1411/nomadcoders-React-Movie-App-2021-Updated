@@ -14,3 +14,7 @@
 ### 2.5 JSX
 * JSX는 javascript를 React를 쓰기위해 변형한 문법
 * babel을 통해서 JSX를 js코드로 변환할 수 있음
+
+### 2.6 JSX part Two
+* React Component는 이름이 대문자로 시작해야한다. 소문자로 적으면 React가 일반 tag로 생각한다.
+* Component를 다른 Component 안에 삽입하려면 Component들을 함수 형태로 만든 다음에 태그를 통해 삽입한다.
