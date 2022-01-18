@@ -10,3 +10,7 @@
 
 ### 2.3 Events in React
 * React에서 Element를 생성할 때 2번째 인자로 Event Listener를 추가할 수 있다. (1번째인자는 이름, 3번째인자는 내용)
+
+### 2.5 JSX
+* JSX는 javascript를 React를 쓰기위해 변형한 문법
+* babel을 통해서 JSX를 js코드로 변환할 수 있음
