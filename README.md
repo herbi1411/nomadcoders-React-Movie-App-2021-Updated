@@ -7,3 +7,6 @@
 ### 2.2 Our First React Element
 * reactDOM은 React에서 만든 element를 html에 넣기 위한 라이브러리 
 * html파일에 react를 script로 import 하고 코드를 작성할 수 있다.
+
+### 2.3 Events in React
+* React에서 Element를 생성할 때 2번째 인자로 Event Listener를 추가할 수 있다. (1번째인자는 이름, 3번째인자는 내용)
