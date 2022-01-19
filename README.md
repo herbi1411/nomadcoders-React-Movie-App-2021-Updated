@@ -51,3 +51,7 @@ ___
 * label태그에서 for의 값으로 연결할 요소의 id를 명시해 연결시킬 수 있다.
 * JSX에서는 for가 JS에서 쓰이므로, htmlFor라 해야한다. (class도 className이라고 써야함)
 * HTML 코드로는 input의 값을 Control할 수 없음
+
+___
+### 3.6 State Practice part One
+* 여러개 input의 value값을 같은 변수로 지정할 수 있음 (값이 함께 변함)
