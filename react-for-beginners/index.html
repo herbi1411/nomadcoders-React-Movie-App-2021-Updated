@@ -16,33 +16,89 @@
 <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 <script type="text/babel">
     const root = document.getElementById("root");
-    const App = () => {
+    const MinitesToHours = () => {
         const [amounts, setAmounts] = React.useState(0);
-        const [flipped, setFlipped] = React.useState(false);
+        const [inverted, setInverted] = React.useState(false);
 
         const onChange = (event) => {
             setAmounts(event.target.value)
         }
-        const onFlip = () => {
+        const onInvert = () => {
             reset();
-            setFlipped((flipped) => !flipped);
+            setInverted((inverted) => !inverted);
         }    
         const reset = () => {
             setAmounts(0);
         }
         return <div>
-            <h1>Super Converter</h1>
-            <h3> You want to convert {amounts}</h3>
             <div>
                 <label htmlFor="minutes">Minutes</label>
-                <input value = {flipped ? amounts * 60 : amounts} id = "minutes"  placeholder="Minutes" type = "number" onChange = {onChange} disabled = {flipped}/>
+                <input value = {inverted ? amounts * 60 : amounts} id = "minutes"  placeholder="Minutes" type = "number" onChange = {onChange} disabled = {inverted}/>
             </div>
             <div>
                 <label htmlFor="hours">Hours</label>
-                <input value = {flipped ? amounts :Math.round(amounts / 60)} id = "hours" placeholder="Hours" type = "number" onChange = {onChange} disabled = {!flipped}/>
+                <input value = {inverted ? amounts :Math.round(amounts / 60)} id = "hours" placeholder="Hours" type = "number" onChange = {onChange} disabled = {!inverted}/>
                 <button onClick={reset}>reset</button>
-                <button onClick={onFlip}>Flipped</button>
+                <button onClick={onInvert}>{inverted ? "Turn Back" : "Invert"}</button>
             </div>
+        </div>;
+    }
+    const KmToMiles = () => {
+        const [kms, setKms] = React.useState(0);
+        const [miles, setMiles] = React.useState(0);
+        const [inverted, setInverted] = React.useState(false);
+
+        const reset = () =>{
+            setMiles(0);
+            setKms(0);
+        }
+
+        const onClick = () => {
+            setInverted((inverted) => !inverted)
+            reset();
+        }
+        const onChange = (event) => {
+            if(inverted){
+                setMiles(event.target.value);
+            }else{
+                setKms(event.target.value);
+            }
+        }
+        return <div>
+            <h3>KM To Miles</h3>
+            <div>
+                <label htmlFor="km">KM</label>
+                <input id="km" placeholder="km" value = {inverted? Math.round(miles * 1.6) : kms} type = "number" onChange = {onChange} disabled = {inverted} /> 
+            </div>
+            <div>
+                <label htmlFor="miles">Miles</label>
+                <input id="miles" placeholder="mile" value = {inverted? miles : Math.round(kms / 1.6)} type = "number" onChange = {onChange} disabled = {!inverted} /> 
+            </div>
+            <div>
+                <button onClick = {reset}>reset</button>
+                <button onClick = {onClick}>{inverted ? "Turn Back" : "Invert"}</button>
+            </div>
+        </div>
+         ;
+    }
+    const App = () => {
+        const [index, setIndex] = React.useState("xx");
+
+        const onChange = (event) => {
+            setIndex(event.target.value);
+        }
+
+        return <div>
+            <h1>Super Converter</h1>
+            <select onChange = {onChange}>
+                <option value = "xx">Select your Unit </option>
+                <option value = "0">Minutes & Hours </option>
+                <option value = "1">Km & Miles </option>
+            </select>
+            <hr/>
+            { index === "xx" ? <h3> Please Select Your Unit </h3> : null}
+            { index === "0" ? <MinitesToHours/> : null}
+            { index === "1" ? <KmToMiles/> : null} 
         </div>;
     }
         ReactDOM.render(<App/>, root);

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        input {
+            margin: auto 10px auto 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+</body>
+<script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script type="text/babel">
+    const root = document.getElementById("root");
+    const MinitesToHours = () => {
+        const [amounts, setAmounts] = React.useState(0);
+        const [inverted, setInverted] = React.useState(false);
+
+        const onChange = (event) => {
+            setAmounts(event.target.value)
+        }
+        const onInvert = () => {
+            reset();
+            setInverted((inverted) => !inverted);
+        }    
+        const reset = () => {
+            setAmounts(0);
+        }
+        return <div>
+            <div>
+                <label htmlFor="minutes">Minutes</label>
+                <input value = {inverted ? amounts * 60 : amounts} id = "minutes"  placeholder="Minutes" type = "number" onChange = {onChange} disabled = {inverted}/>
+            </div>
+            <div>
+                <label htmlFor="hours">Hours</label>
+                <input value = {inverted ? amounts :Math.round(amounts / 60)} id = "hours" placeholder="Hours" type = "number" onChange = {onChange} disabled = {!inverted}/>
+                <button onClick={reset}>reset</button>
+                <button onClick={onInvert}>{inverted ? "Turn Back" : "Invert"}</button>
+            </div>
+        </div>;
+    }
+        ReactDOM.render(<App/>, root);
+</script>   
+</html>
+
+<!-- html 파일에서 React를 쓰기 위한 코드 -->

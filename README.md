@@ -20,7 +20,7 @@ ___
 
 ___
 ### 2.6 JSX part Two
-* React Component는 이름이 대문자로 시작해야한다. 소문자로 적으면 React가 일반 tag로 생각한다.
+* React Component는 이름이 <span style="color:red">대문자</span>로 시작해야한다. 소문자로 적으면 React가 일반 tag로 생각한다.
 * Component를 다른 Component 안에 삽입하려면 Component들을 함수 형태로 만든 다음에 태그를 통해 삽입한다.
 
 ___
@@ -59,3 +59,10 @@ ___
 ___
 ### 3.7 State Practice part Two
 * 시간<->분 변환을 위한 flip 변수 추가
+
+___
+### 3.9 Final Practice and Recap
+* 여러개의 component를 생성해 App에 합치기
+* Componenet이름은 대문자로 시작해야함
+* 값을 선택할 수 있는 select HTML 태그가 있음 (option과 함께 사용, option 태그의 value를 통해 원하는 작업 가능)
+* hr태그 : 화면에 수평선 그리기
