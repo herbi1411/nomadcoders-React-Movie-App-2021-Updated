@@ -29,3 +29,7 @@ ___
 * 코드에서 eventlistner를 통해 counter 변수 값을 수정하는 일을 하고 있는데, 이렇게 하면 component를 render하는 함수는 아직 한번만 호출되므로, html화면에서 업데이트 되지 않는다. (state의 필요성)
 * state를 사용하지 않고 화면을 update하려면 render함수를 호출해야한다.
 * React는 일반 JS와 다르게 컴포넌트의 변화된 부분만 파악해서 바꿔주므로 더 효율적이다.
+
+___
+### 3.1 setState part One
+* useState를 사용하면 기본적으로 초기값과, 값을 변경하는데 필요한 함수가 배열로 주어진다. 
