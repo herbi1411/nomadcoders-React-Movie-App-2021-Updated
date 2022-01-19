@@ -2,6 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <style>
+        input {
+            margin: auto 10px auto 10px;
+        }
+    </style>
 </head>
 <body>
     <div id="root"></div>
@@ -12,19 +17,25 @@
 <script type="text/babel">
     const root = document.getElementById("root");
     const App = () => {
-        const [counter, setCounter] = React.useState(0);
-        const onClick = () => {
-        //    setCounter(counter+1);
-           setCounter((counter) => counter + 1); // 더 안전한 방법(항상 React가 최신의 Counter를 가져올 것이라고 보장해줌)
+        const [minutes, setMinutes] = React.useState();
+        const [hours, setHours] = React.useState();
+
+        const onChange = (event) => {
+            setMinutes(event.target.value);
+            // console.log(event.target.value);
         }
-        console.log(counter);
+
         return <div>
-            <h3>Total clicks: {counter}</h3>
-            <button onClick = {onClick}>Click me</button>
+            <h1>Super Converter</h1>
+            <h3> You want to convert {minutes}</h3>
+            <label htmlFor="minutes">Minutes</label>
+            <input value = {minutes} id = "minutes"  placeholder="Minutes" type = "number" onChange = {onChange}/>
+            <label htmlFor="hours">Hours</label>
+            <input value = {hours} id = "hours" placeholder="Hours" type = "number"/>
         </div>;
     }
         ReactDOM.render(<App/>, root);
-</script>
+</script>   
 </html>
 
 <!-- html 파일에서 React를 쓰기 위한 코드 -->

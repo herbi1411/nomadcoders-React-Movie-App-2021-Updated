@@ -44,3 +44,10 @@ ___
 * 대신에 set함수 안에 state값을 함수형태로 인자로 넣으면 React에서 그 값이 현재 값이라는 것을 보장해줌.
 * 이유: setState함수는 비동기 함수이므로, 값을 인자값으로 넣으면 뒤의 코드와 setState안의 코드가 동시에 실행된다. 이때 setState함수가 또 있으면 똑같은 state값이 setState에 2번 들어가게돼 중복이 발생하는 것이다. 따라서 함수형태로 인자값을 주면, 먼저 함수가 실행 된 후에 setState함수의 인자값으로 들어가게 되므로 안전하게 원하는 대로 값을 update 할 수 있다.
 (04:45 왜 setcounter에 함수를 넣어야 최신값이 보장되는가???)
+
+___
+### 3.5 Inputs and State
+* JSX에서도 일반 HTML 태그를 쓸 수 있음
+* label태그에서 for의 값으로 연결할 요소의 id를 명시해 연결시킬 수 있다.
+* JSX에서는 for가 JS에서 쓰이므로, htmlFor라 해야한다. (class도 className이라고 써야함)
+* HTML 코드로는 input의 값을 Control할 수 없음
