@@ -55,3 +55,7 @@ ___
 ___
 ### 3.6 State Practice part One
 * 여러개 input의 value값을 같은 변수로 지정할 수 있음 (값이 함께 변함)
+
+___
+### 3.7 State Practice part Two
+* 시간<->분 변환을 위한 flip 변수 추가

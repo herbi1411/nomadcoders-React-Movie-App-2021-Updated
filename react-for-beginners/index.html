@@ -17,24 +17,32 @@
 <script type="text/babel">
     const root = document.getElementById("root");
     const App = () => {
-        const [minutes, setMinutes] = React.useState();
-        const [hours, setHours] = React.useState();
+        const [amounts, setAmounts] = React.useState(0);
+        const [flipped, setFlipped] = React.useState(false);
 
         const onChange = (event) => {
-            setMinutes(event.target.value);
-            // console.log(event.target.value);
+            setAmounts(event.target.value)
         }
+        const onFlip = () => {
+            reset();
+            setFlipped((flipped) => !flipped);
+        }    
         const reset = () => {
-            setMinutes(0);
+            setAmounts(0);
         }
         return <div>
             <h1>Super Converter</h1>
-            <h3> You want to convert {minutes}</h3>
-            <label htmlFor="minutes">Minutes</label>
-            <input value = {minutes} id = "minutes"  placeholder="Minutes" type = "number" onChange = {onChange}/>
-            <label htmlFor="hours">Hours</label>
-            <input value = {Math.round(minutes / 60)} id = "hours" placeholder="Hours" type = "number"/>
-            <button onClick={reset}>reset</button>
+            <h3> You want to convert {amounts}</h3>
+            <div>
+                <label htmlFor="minutes">Minutes</label>
+                <input value = {flipped ? amounts * 60 : amounts} id = "minutes"  placeholder="Minutes" type = "number" onChange = {onChange} disabled = {flipped}/>
+            </div>
+            <div>
+                <label htmlFor="hours">Hours</label>
+                <input value = {flipped ? amounts :Math.round(amounts / 60)} id = "hours" placeholder="Hours" type = "number" onChange = {onChange} disabled = {!flipped}/>
+                <button onClick={reset}>reset</button>
+                <button onClick={onFlip}>Flipped</button>
+            </div>
         </div>;
     }
         ReactDOM.render(<App/>, root);
