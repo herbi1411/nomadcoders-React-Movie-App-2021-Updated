@@ -14,8 +14,10 @@
     const App = () => {
         const [counter, setCounter] = React.useState(0);
         const onClick = () => {
-           setCounter(counter+1);
+        //    setCounter(counter+1);
+           setCounter((counter) => counter + 1); // 더 안전한 방법(항상 React가 최신의 Counter를 가져올 것이라고 보장해줌)
         }
+        console.log(counter);
         return <div>
             <h3>Total clicks: {counter}</h3>
             <button onClick = {onClick}>Click me</button>
