@@ -86,3 +86,8 @@ ___
 * Prop Types를 통해 컴포넌트로 넘겨줄 props의 type을 지정할 수 있음
 * 협업할 때 실수로 다른 type의 변수를 넘겨주는 것을 방지할 수 있음
 * default argument를 설정할 수 있다.
+
+___
+### 5.0 Introduction (Create-React-App)
+* npx create-react-app \[project name\]으로 프로젝트 생성
+* npm start로 프로젝트 실행
