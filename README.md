@@ -102,3 +102,7 @@ ___
 ___
 ### 6.0 Introduction(Effect)
 * Effect를 통해 표현하고 싶은 요소를 원할 때만 Render할 수 있다.
+
+___
+### 6.1 useEffect
+* Effect를 통해 처음 component가 render될 때만 실행하고 싶은 작업을 할 수 있다.
