@@ -79,3 +79,10 @@ ___
 * 부모의 상태가 변경되면 자식 상태도 모두 Re-rendering 된다.
 * Memo를 통해 자식 component의 변화가 없다면 부모 component가 변해도 re-render하지 않도록 설정할 수 있다.
 * memo함수를 호출해서 인자로 자식 component에 넣은 뒤, 부모 component에서는 memo함수의 반환값(component)를 사용하면 된다.
+* 콜백 함수를 인자로 넘겨줄 때는, 부모 component가 rerender할 때 코드가 같더라도 계속 새로운 함수를 넘겨주므로 memo의 효과가없다. 이때는 usecallback을 사용해 rerender를 막을 수 있다.
+
+___
+### 4.2 Prop Types
+* Prop Types를 통해 컴포넌트로 넘겨줄 props의 type을 지정할 수 있음
+* 협업할 때 실수로 다른 type의 변수를 넘겨주는 것을 방지할 수 있음
+* default argument를 설정할 수 있다.
