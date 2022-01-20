@@ -15,19 +15,24 @@
 <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
 <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 <script type="text/babel">
-        function Btn({myinput, big}){
+        function Btn({myinput, onClick}){
+            console.log(myinput,"was rendered");
             return <button style={{
                 backgroundColor : "tomato",
                 color: "white",
                 padding: "10px 20px",
                 borderRadius: 10,
-                fontSize: big ? 18 : 16
-            }}>{myinput}</button>;
+            }} onClick = {onClick}>{myinput}</button>;
         }
+        const MemorizedBtn = React.memo(Btn)
         function App () {
+            const [value,setValue] = React.useState("Save Changes");
+            const changeValue = () => {
+                setValue("Revert Changes");
+            }
             return <div>
-                <Btn myinput = "Save Changes" big = {true}/>
-                <Btn myinput = "Quit" bit = {false}/>
+                <MemorizedBtn myinput = {value} onClick = {changeValue}/>
+                <MemorizedBtn myinput = "Continue"/>
             </div>
         }
         const root = document.getElementById("root");

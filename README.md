@@ -72,3 +72,10 @@ ___
 * 부모 component에서 자식 component로 값을 넘겨주기
 * HTML 태그에 속성을 주는 것과 같이 custom component에 prop을 주면 됨
 * prop은 배열로 묶여서 하나의 parameter로 전달됨
+
+___
+### 4.1 Memo
+* props로 함수도 전달할 수 있다.
+* 부모의 상태가 변경되면 자식 상태도 모두 Re-rendering 된다.
+* Memo를 통해 자식 component의 변화가 없다면 부모 component가 변해도 re-render하지 않도록 설정할 수 있다.
+* memo함수를 호출해서 인자로 자식 component에 넣은 뒤, 부모 component에서는 memo함수의 반환값(component)를 사용하면 된다.
