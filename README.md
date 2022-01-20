@@ -98,3 +98,7 @@ ___
 * css속성을 주기위해 상위 component 파일에서 css파일을 import 해도 된다.
 * css파일을 component에 삽입할때 (import styles.\[id\] from \[route\])를 입력하면 React에서 객체처럼 style을 적용할 수 있다. 적용하고 싶은 component의 className속성에 styles.\[id\] 를 입력하면 된다. 이때 css파일의 이름은 확장자 앞에 .module이 붙어야한다.
 * 이 방식은 여러 파일에 각자 css파일을 적용했을 때 id 값이 중복되도 값이 겹치지 않는다는 장점이 있다. (React에서 Random으로 css id를 생성한다.)
+
+___
+### 6.0 Introduction(Effect)
+* Effect를 통해 표현하고 싶은 요소를 원할 때만 Render할 수 있다.
