@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        input {
+            margin: auto 10px auto 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+</body>
+<script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script type="text/babel">
+        function Btn({myinput, big}){
+            return <button style={{
+                backgroundColor : "tomato",
+                color: "white",
+                padding: "10px 20px",
+                borderRadius: 10,
+                fontSize: big ? 18 : 16
+            }}>{myinput}</button>;
+        }
+        function App () {
+            return <div>
+                <Btn myinput = "Save Changes" big = {true}/>
+                <Btn myinput = "Quit" bit = {false}/>
+            </div>
+        }
+        const root = document.getElementById("root");
+        ReactDOM.render(<App/>, root);
+</script>   
+</html>
+
+<!-- html 파일에서 React를 쓰기 위한 코드 -->

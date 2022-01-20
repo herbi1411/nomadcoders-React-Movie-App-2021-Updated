@@ -66,3 +66,9 @@ ___
 * Componenet이름은 대문자로 시작해야함
 * 값을 선택할 수 있는 select HTML 태그가 있음 (option과 함께 사용, option 태그의 value를 통해 원하는 작업 가능)
 * hr태그 : 화면에 수평선 그리기
+
+___
+### 4.0 Props
+* 부모 component에서 자식 component로 값을 넘겨주기
+* HTML 태그에 속성을 주는 것과 같이 custom component에 prop을 주면 됨
+* prop은 배열로 묶여서 하나의 parameter로 전달됨
