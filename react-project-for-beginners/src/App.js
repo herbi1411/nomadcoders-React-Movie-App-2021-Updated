@@ -1,33 +1,30 @@
 import Button from './Button'
 import styles from "./App.module.css"
 import {useState, useEffect} from "react";
-function App() {
-  const [counter,setCounter] = useState(0);
-  const [keyword, setKeyword] = useState("");
 
-  useEffect(() =>{
-    console.log("i run the first time");
+function Hello(){
+  
+  useEffect(()=>{
+      console.log("I'm created!")
+      return () => {console.log("I'm destroyed!!");}
   },[])
-  const onClick = () => {
-      setCounter((prev) => prev + 1);
-  }
-  useEffect(() => {
-    console.log("Search for",keyword);
-  },[keyword])
+  return <h1>Hello</h1>;
+} 
 
-  const onChange = (event) => setKeyword(event.target.value);
-  const clickSearch = () => {
-    console.log(keyword);
-  }
-  console.log("i run all the time");
-  // console.log("Search for",keyword);
+
+function App() {
+  const [showing, setShowing] = useState(false);
+  useEffect(()=>{
+    if(showing){
+      setTimeout(() =>setShowing(false), 1000);
+    }
+  },[showing]);
+  const onClick = () => setShowing((prev) => !prev); //setState함수의 인자로 함수로 넘겨줄 때 변수명이 똑같을 필요가 없다..!!
 
   return (
     <div className="App">
-      <input type="text" placeholder="Search here..." value = {keyword} onChange = {onChange} />
-      <button onClick={clickSearch}>Search!!</button>
-      <h1>{counter}</h1> 
-      <button onClick = {onClick}> click me</button>
+      <button onClick={onClick}>{showing? "Hide" : "Show"}</button>
+      {showing? <Hello/> : ""}
     </div>
   );
 }

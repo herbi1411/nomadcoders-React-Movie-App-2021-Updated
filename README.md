@@ -110,3 +110,9 @@ ___
 ___
 ### 6.2 Deps
 * Effect 함수를 사용할때 2번째 인자값 배열 안에 변수를 넣으면, 배열 값의 상태가 바뀔 때 1번째 인자인 call back함수가 실행된다.
+
+___
+### 6.4 CleanUp
+* useEffect callback 함수의 return 값으로 함수를 넘김으로써 clean up 함수를 실행할 수 있다.
+
+(02:50)
