@@ -115,4 +115,7 @@ ___
 ### 6.4 CleanUp
 * useEffect callback 함수의 return 값으로 함수를 넘김으로써 clean up 함수를 실행할 수 있다.
 
-(02:50)
+___
+### 7.0 To Do List part One
+* state로 배열을 선언하더라도 값을 수정할 때는 setState를 사용해야한다.
+* 배열을 선언하고 .push해도 값이 들어가긴 하는데 버그가 발생한다.
