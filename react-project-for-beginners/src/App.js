@@ -15,7 +15,7 @@ function App() {
     if(toDo===""){
       return;
     }else{
-      // toDos.push(toDo); //Don't do that!!
+      // toDos.push("Don't do That!!"); //Don't do that!!
       setToDos((prev) => [toDo , ...prev]);
       setToDo(""); 
 
@@ -23,6 +23,9 @@ function App() {
   }
   useEffect(()=>{
     console.log(toDos);
+    console.log(toDos.map((value, index) => {
+      return <li key={index}>{value}</li>
+    }));
   },[toDos]);
   return (
     <div>
@@ -31,10 +34,16 @@ function App() {
           <input type="text" placeholder = "Write your to do..." value={toDo} onChange={onChange} />
           <button>Add To Do!</button>
       </form>
-
+      <hr/>
       {/* {toDos.forEach((value, index) => {
         return <h3 key={index}>{value}</h3>
       })} */}
+
+      <ul>
+        {toDos.map((value, index) => {
+          return <li key={index}>{value}</li>
+        })}
+      </ul>
     </div>
   );
 }

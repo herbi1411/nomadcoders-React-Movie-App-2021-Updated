@@ -119,3 +119,9 @@ ___
 ### 7.0 To Do List part One
 * state로 배열을 선언하더라도 값을 수정할 때는 setState를 사용해야한다.
 * 배열을 선언하고 .push해도 값이 들어가긴 하는데 버그가 발생한다.
+
+___
+### 7.1 To Do List part Two
+* map함수를 통해서 배열로 이루어진 state를 화면에 요소별로 출력할 수 있다.
+* forEach 함수는 단지 요소별로 callback함수를 실행하며, map함수는 Callback함수의 return값을 모아서 새로운 배열을 반환한다.
+* list component를 render할 때는 list의 각 요소에 prop으로 key가 있어야 한다.
