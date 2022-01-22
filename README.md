@@ -125,3 +125,8 @@ ___
 * map함수를 통해서 배열로 이루어진 state를 화면에 요소별로 출력할 수 있다.
 * forEach 함수는 단지 요소별로 callback함수를 실행하며, map함수는 Callback함수의 return값을 모아서 새로운 배열을 반환한다.
 * list component를 render할 때는 list의 각 요소에 prop으로 key가 있어야 한다.
+
+___
+### 7.2 Coin Tracker
+* 수천개 코인의 시세 가져오기
+* api를 통해 json으로 코인들을 가져와 보여준다.
