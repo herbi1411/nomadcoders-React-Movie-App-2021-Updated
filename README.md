@@ -138,3 +138,10 @@ ___
 * 비동기 함수 처리를 위해 then 보단 async-await을 많이 사용한다.
 * 동기로 만들기 위해 코드를 작성할 함수 이름 앞에 async를 붙이고, 내부에서 sync를 맞출 함수 앞에 await을 붙인다.
 * 이렇게 하면 함수 내부적으로 await이 붙은 곳 앞에서 비동기 함수의 처리를 기다림으로써 동기적으로 sync를 맞추는 효과를 낼 수 있다.
+
+___
+### 7.4 Movie App part Two
+* React에서의 화면전환
+* Proptype에서 요소가 배열로 들어올 때 arrayOf\(\)를 통해 배열 요소의 속성을 지정할 수 있다.
+* url에 따라 사용할 component를 정하기 위해 Router를 사용한다.
+* App파일에는 Router를 넣는다.
