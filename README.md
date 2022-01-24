@@ -145,3 +145,7 @@ ___
 * Proptype에서 요소가 배열로 들어올 때 arrayOf\(\)를 통해 배열 요소의 속성을 지정할 수 있다.
 * url에 따라 사용할 component를 정하기 위해 Router를 사용한다.
 * App파일에는 Router를 넣는다.
+* Router에는 (Brower Router / Hash Router) 2개가 있다. Hash Router는 거의 안쓰인다.
+* react-router-dom 버전6부터 Routers가 switch를 대신한다. (한개의 Route만 Render하는 역할)
+* Link component를 활용해서 페이지 위치가 바뀌어도 페이지가 새로고침 되지 않는다.
+* [React router overview](https://reactrouter.com/docs/en/v6/getting-started/overview)
