@@ -8,7 +8,7 @@ const Movie = ({id,coverImg,title,summary,genres}) => {
         <img src={coverImg} />
         {/* <h2>{title}</h2> */}
         <h2>
-            <Link to={`movie/${id}`}>{title}</Link> {/* 페이지 새로고침X */}
+            <Link to={`${process.env.PUBLIC_URL}/movie/${id}`}>{title}</Link> {/* 페이지 새로고침X */}
         </h2>
         <p>{summary}</p>
         <ul>

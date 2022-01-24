@@ -8,9 +8,9 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element= {<Home/>} /> {/* default path */}        
-        <Route path="/movie/:id" element = {<Detail/>} /> {/* dynamic Url*/}
-        <Route path="/temp" element = {<SyncTemp/>}/>
+        <Route path={`${process.env.PUBLIC_URL}/`} element= {<Home/>} /> {/* default path */}        
+        <Route path={`${process.env.PUBLIC_URL}/:id`} element = {<Detail/>} /> {/* dynamic Url*/}
+        <Route path={`${process.env.PUBLIC_URL}/temp`} element = {<SyncTemp/>}/>
       </Routes>
     </Router>
   );

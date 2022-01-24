@@ -152,9 +152,20 @@ ___
 * react-router-dom 버전6부터 Routers가 switch를 대신한다. (한개의 Route만 Render하는 역할)
 * Link component를 활용해서 페이지 위치가 바뀌어도 페이지가 새로고침 되지 않는다.
 * [React router overview](https://reactrouter.com/docs/en/v6/getting-started/overview)
+* [Hash Router, Browser Router 비교](https://worker-k.tistory.com/entry/React-BrowserRouter%EC%99%80-HashRouter%EC%9D%98-%EC%B0%A8%EC%9D%B4%EC%A0%90-%EC%A0%95%EB%A6%AC)
 
 ___
 ### 7.6 Parameters
 * Router에는 Dynamic url을 넣을 수 있다. Dynamic url이란 url에 변수가 들어갈 수 있다는 뜻이다.
 * useParams 함수를 통해 Dynamic url에 들어간 변수 값을 알아낼 수 있다.
 * [Promise 공식문서](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+
+
+___
+### 7.7 Publishing
+* github-io에 프로젝트를 build 할 수 있다.
+* 순서
+1. npm install gh-pages
+2. package.json에서 scripts에 "deploy" : "gh-pages -d build"와 "predeploy": "npm run build" 삽입
+3. 파일 마지막에 "hompage" : "https://\[github이름\].github.io/\[레포지토리 이름\]"입력
+3. npm run deploy
