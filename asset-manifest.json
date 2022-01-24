@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/nomadcoders-React-Movie-App-2021-Updated/static/js/main.f3a617a1.js",
+    "main.js": "/nomadcoders-React-Movie-App-2021-Updated/static/js/main.162ccd21.js",
     "index.html": "/nomadcoders-React-Movie-App-2021-Updated/index.html",
-    "main.f3a617a1.js.map": "/nomadcoders-React-Movie-App-2021-Updated/static/js/main.f3a617a1.js.map"
+    "main.162ccd21.js.map": "/nomadcoders-React-Movie-App-2021-Updated/static/js/main.162ccd21.js.map"
   },
   "entrypoints": [
-    "static/js/main.f3a617a1.js"
+    "static/js/main.162ccd21.js"
   ]
 }
