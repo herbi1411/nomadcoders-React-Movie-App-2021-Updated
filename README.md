@@ -138,14 +138,23 @@ ___
 * 비동기 함수 처리를 위해 then 보단 async-await을 많이 사용한다.
 * 동기로 만들기 위해 코드를 작성할 함수 이름 앞에 async를 붙이고, 내부에서 sync를 맞출 함수 앞에 await을 붙인다.
 * 이렇게 하면 함수 내부적으로 await이 붙은 곳 앞에서 비동기 함수의 처리를 기다림으로써 동기적으로 sync를 맞추는 효과를 낼 수 있다.
-
+* [async/await 학습](https://victorydntmd.tistory.com/87)
 ___
 ### 7.4 Movie App part Two
 * React에서의 화면전환
 * Proptype에서 요소가 배열로 들어올 때 arrayOf\(\)를 통해 배열 요소의 속성을 지정할 수 있다.
+
+___
+### 7.5 React Router
 * url에 따라 사용할 component를 정하기 위해 Router를 사용한다.
 * App파일에는 Router를 넣는다.
 * Router에는 (Brower Router / Hash Router) 2개가 있다. Hash Router는 거의 안쓰인다.
 * react-router-dom 버전6부터 Routers가 switch를 대신한다. (한개의 Route만 Render하는 역할)
 * Link component를 활용해서 페이지 위치가 바뀌어도 페이지가 새로고침 되지 않는다.
 * [React router overview](https://reactrouter.com/docs/en/v6/getting-started/overview)
+
+___
+### 7.6 Parameters
+* Router에는 Dynamic url을 넣을 수 있다. Dynamic url이란 url에 변수가 들어갈 수 있다는 뜻이다.
+* useParams 함수를 통해 Dynamic url에 들어간 변수 값을 알아낼 수 있다.
+* [Promise 공식문서](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise)

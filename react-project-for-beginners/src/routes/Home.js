@@ -28,14 +28,16 @@ const Home = () => {
       <div>
         {loading ? <h1>Loading...</h1> : (
           <div>
-              {movies.map((movie,index) => <div key={movie.id}>
+              {movies.map((movie,index) => (
                 <Movie 
+                key = {movie.id}
+                id = {movie.id}
                 coverImg = {movie.medium_cover_image}
                 title = {movie.title}
                 summary = {movie.summary}
                 genres = {movie.genres}
                 />
-              </div>
+              )
               )}
           </div>
         )}
